@@ -1,2 +1,2 @@
-# MCHD-IT-
+# MCHD IT
 MCHD IT Website
