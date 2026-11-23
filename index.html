@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MCHD IT</title>
+  <meta name="description" content="Delivering Scalable Software Solutions and Data-Driven Insights for Research Organizations">
+  <meta name="theme-color" content="#0b2342">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap">
+  <link rel="preload" as="image" href="assets/img/systems/showreel-poster.jpg">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script>
+    /* Homepage hero variant — the only difference between Version 1 and Version 2.
+       DEFAULT_HERO sets what visitors see; reviewers can switch with ?hero=1 or ?hero=2
+       (remembered for the browser tab, so inner pages link back to the same version). */
+    (function () {
+      var DEFAULT_HERO = '1';
+      var d = document.documentElement, v = DEFAULT_HERO;
+      d.classList.add('js');
+      try {
+        var q = new URLSearchParams(location.search).get('hero');
+        if (q === '1' || q === '2') { v = q; sessionStorage.setItem('mchd.hero', v); }
+        else v = sessionStorage.getItem('mchd.hero') || DEFAULT_HERO;
+      } catch (e) {}
+      d.setAttribute('data-hero', v === '2' ? 'split' : 'centered');
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" data-nav>
+    <div class="nav__bar">
+      <a class="nav__brand" href="#home" aria-label="MCHD IT home">
+        <img src="assets/img/logo-mark.png" width="36" height="36" alt="">
+        <span>MCHD IT</span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#home" data-nav-link>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg>Home</a>
+        <a href="#technology" data-nav-link>
+          <svg class="i-tech" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6 7.5 7.8v3.6c0 3.1 1.9 5 4.5 5.8 2.6-.8 4.5-2.7 4.5-5.8V7.8z"/><path d="M9.9 10.7a3 3 0 0 1 4.2 0M10.9 12.1a1.5 1.5 0 0 1 2.2 0"/><circle cx="12" cy="13.8" r=".5" fill="currentColor" stroke="none"/><path d="M12 6V3.9M12 17.2v2.9M7.5 11H4.4M16.5 11h3.1M9.4 7V5.2H7.6M14.6 7V5.2h1.8M8.7 15.4v2.3H7.6M15.3 15.4v2.3h1.1"/><circle cx="12" cy="2.85" r="1.05"/><circle cx="12" cy="21.15" r="1.05"/><circle cx="3.35" cy="11" r="1.05"/><circle cx="20.65" cy="11" r="1.05"/><circle cx="6.55" cy="5.2" r="1.05"/><circle cx="17.45" cy="5.2" r="1.05"/><circle cx="6.55" cy="17.7" r="1.05"/><circle cx="17.45" cy="17.7" r="1.05"/></svg>Technology</a>
+        <a href="#expertise" data-nav-link>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M2 12h3M19 12h3M4.9 19.1 7 17M17 7l2.1-2.1"/></svg>Expertise</a>
+        <a href="#team" data-nav-link>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6 6 0 0 1 3.5 6"/></svg>Our Team</a>
+        <a href="#global" data-nav-link>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>Global</a>
+      </nav>
+      <a class="btn btn--primary nav__cta" href="contact.html">Contact</a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" data-nav-toggle>
+        <span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__sheet" id="mobile-menu" data-nav-sheet hidden>
+      <a href="#home">Home</a>
+      <a href="#technology">Technology</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#team">Our Team</a>
+      <a href="#global">Global</a>
+      <a class="btn btn--primary" href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home" data-hero aria-labelledby="hero-title">
+      <div class="hero__sticky">
+        <div class="hero__bg" aria-hidden="true" data-hero-bg>
+          <div class="hero__beam hero__beam--a"></div>
+          <div class="hero__beam hero__beam--b"></div>
+          <div class="hero__beam hero__beam--c"></div>
+          <div class="hero__grid"></div>
+          <canvas class="hero__particles" data-particles></canvas>
+          <div class="hero__horizon"></div>
+        </div>
+
+        <div class="hero__content container" data-hero-content>
+          <p class="badge badge--dark" data-reveal>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>
+            <span>Research Technology Leader</span>
+          </p>
+          <h1 class="hero__title" id="hero-title" data-split>Transforming Research through Digital Excellence</h1>
+          <p class="hero__lead" data-reveal style="--d:.35s">Delivering Scalable Software Solutions and Data-Driven Insights for Research Organizations</p>
+          <div class="hero__actions" data-reveal style="--d:.45s">
+            <a class="btn btn--primary btn--lg" href="#expertise">Explore Our Work
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+            <a class="btn btn--ghost btn--lg" href="#team">Meet the Team</a>
+          </div>
+        </div>
+
+        <!-- Featured showreel: fixed responsive frame (layout set by data-hero: centered = V1, split = V2) -->
+        <div class="stage" data-stage aria-roledescription="carousel" aria-label="Featured systems">
+          <div class="stage__media" data-stage-media>
+            <!-- videos injected from SYSTEMS config in main.js; noscript fallback below -->
+            <noscript><img src="assets/img/systems/showreel-poster.jpg" alt="MCHD IT showreel"></noscript>
+          </div>
+          <div class="stage__shade" aria-hidden="true"></div>
+
+          <div class="stage__top">
+            <span class="stage__live"><i></i><span data-stage-index>01</span>&nbsp;/&nbsp;<span data-stage-total>01</span></span>
+            <div class="stage__controls">
+            <div class="stage__sys-nav" data-sys-nav hidden>
+              <button type="button" class="icon-btn" data-sys-prev aria-label="Previous system"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg></button>
+              <button type="button" class="icon-btn" data-sys-next aria-label="Next system"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button>
+            </div>
+              <button type="button" class="stage__play" data-stage-play aria-pressed="false" aria-label="Pause video">
+                <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg>
+                <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="stage__caption">
+            <div class="stage__title-wrap">
+              <h2 class="stage__title" data-stage-title aria-live="polite">Graveyard Management System</h2>
+              <ul class="stage__tags" data-stage-tags>
+                <li>Web Dashboard</li><li>Mobile App</li><li>Analytics</li>
+              </ul>
+            </div>
+          </div>
+          <div class="stage__chapters" role="tablist" aria-label="System views" data-stage-chapters></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TECHNOLOGY ============ -->
+    <section class="section section--light" id="technology" aria-labelledby="tech-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="badge">Strength in Stack</p>
+          <h2 id="tech-title">Trusted Tools &amp; Technologies</h2>
+          <p>Leveraging reliable, scalable technologies to deliver high-performance digital platforms—from data collection and MIS to monitoring systems and advanced analytics.</p>
+        </header>
+        <div class="stack">
+          <article class="stack__card" data-reveal style="--d:0s">
+            <h3><span class="stack__idx">01</span>Web Platform</h3>
+            <ul>
+              <li><img src="assets/img/tech/spring-boot.png" alt="Spring Boot" loading="lazy"></li>
+              <li><img src="assets/img/tech/java.png" alt="Java" loading="lazy"></li>
+              <li><img src="assets/img/tech/python.png" alt="Python" loading="lazy"></li>
+              <li><img src="assets/img/tech/aspnet.png" alt="ASP.NET" loading="lazy"></li>
+            </ul>
+          </article>
+          <article class="stack__card" data-reveal style="--d:.08s">
+            <h3><span class="stack__idx">02</span>Mobile Platform</h3>
+            <ul>
+              <li><img src="assets/img/tech/ios.png" alt="iOS" loading="lazy"></li>
+              <li><img src="assets/img/tech/flutter.png" alt="Flutter" loading="lazy"></li>
+              <li><img src="assets/img/tech/kotlin.png" alt="Kotlin" loading="lazy"></li>
+              <li><img src="assets/img/tech/android.png" alt="Android" loading="lazy"></li>
+            </ul>
+          </article>
+          <article class="stack__card" data-reveal style="--d:.16s">
+            <h3><span class="stack__idx">03</span>Databases</h3>
+            <ul>
+              <li><img src="assets/img/tech/mysql.png" alt="MySQL" loading="lazy"></li>
+              <li><img src="assets/img/tech/sqlite.png" alt="SQLite" loading="lazy"></li>
+              <li><img src="assets/img/tech/sql-server.png" alt="Microsoft SQL Server" loading="lazy"></li>
+              <li><img src="assets/img/tech/postgresql.png" alt="PostgreSQL" loading="lazy"></li>
+            </ul>
+          </article>
+          <article class="stack__card" data-reveal style="--d:.24s">
+            <h3><span class="stack__idx">04</span>Open Source Tools</h3>
+            <ul>
+              <li><img src="assets/img/tech/odk.png" alt="ODK" loading="lazy"></li>
+              <li><img src="assets/img/tech/dhis2.png" alt="DHIS2" loading="lazy"></li>
+              <li><img src="assets/img/tech/redcap.png" alt="REDCap" loading="lazy"></li>
+              <li><img src="assets/img/tech/kobotoolbox.png" alt="KoBoToolbox" loading="lazy"></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHAT WE DO ============ -->
+    <section class="section section--tint" id="expertise" aria-labelledby="xp-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="badge">What We Do</p>
+          <h2 id="xp-title">Core Expertise</h2>
+          <p>End-to-end digital solutions that power health research, clinical operations, and national-scale data systems.</p>
+        </header>
+
+      </div>
+
+      <!-- Explorer: 50/50 split on desktop — click/tap an item to show its panel; the beam links it to the panel -->
+      <div class="xp" data-xp>
+        <div class="xp__sticky">
+          <div class="container xp__grid">
+            <div class="xp__nav">
+              <p class="xp__hint" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V10m0-.5V8a1.5 1.5 0 0 1 3 0v2m0-1a1.5 1.5 0 0 1 3 0v4.5a6.5 6.5 0 0 1-6.5 6.5h-.3a6 6 0 0 1-4.7-2.3L4.4 15a1.6 1.6 0 0 1 2.4-2.1L9 15"/></svg>Select an expertise to explore</p>
+              <div class="xp__rail" aria-hidden="true"><span></span></div>
+              <div role="tablist" aria-label="Core Expertise" aria-orientation="vertical" class="xp__tabs" data-xp-tabs></div>
+              <span class="xp__link" data-xp-link aria-hidden="true"><i></i></span>
+            </div>
+            <div class="xp__panels" data-xp-panels></div>
+          </div>
+          <div class="container xp__more-wrap">
+            <button type="button" class="btn btn--outline xp__more" data-xp-more hidden aria-expanded="false"><span>Show More</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TEAM ============ -->
+    <section class="section section--team" id="team" aria-labelledby="team-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="badge">Our Team</p>
+          <h2 id="team-title">Talented Professionals</h2>
+          <p>Meet the diverse team of specialists — from software architects to data scientists</p>
+        </header>
+      </div>
+      <div class="team" data-team data-reveal>
+          <ul class="team__track" data-team-track></ul>
+      </div>
+    </section>
+
+    <!-- ============ GLOBAL ============ -->
+    <section class="section section--dark" id="global" aria-labelledby="global-title">
+      <div class="container global">
+        <div class="global__intro">
+          <p class="eyebrow" data-reveal>Cross-Border Operations</p>
+          <h2 id="global-title" data-reveal>Global Footprint</h2>
+          <p data-reveal>Our team provides physical and digital support across multiple countries, ensuring technology works in the world's most demanding environments.</p>
+        </div>
+        <figure class="map" data-map data-reveal>
+            <img class="map__dots" src="assets/img/world-dots.svg" alt="" width="1050" height="579" loading="lazy">
+            <svg class="map__overlay" viewBox="0 0 1050 579" role="img" aria-label="Countries supported: Bangladesh, India, Nepal, Pakistan, Mali, Gambia, Sierra Leone, Nigeria, Uganda, Ethiopia, Kenya, Tanzania, Mozambique, South Africa, Argentina" data-map-svg></svg>
+          </figure>
+        <ul class="global__stats">
+          <li class="stat-card" data-reveal>
+            <span class="stat-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 15l4-5 4 4 4-7 6 9"/><rect x="2" y="3" width="20" height="18" rx="3"/></svg></span>
+            <div>
+              <p class="stat-card__num" data-count="11" data-suffix="+">11+</p>
+              <h3>Countries Supported</h3>
+              <p>Physical and digital operations across Asia, Africa &amp; South America</p>
+            </div>
+          </li>
+          <li class="stat-card" data-reveal style="--d:.1s">
+            <span class="stat-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span>
+            <div>
+              <p class="stat-card__num" data-count="104" data-suffix="+">104+</p>
+              <h3>Digital Tools Deployed</h3>
+              <p>Research platforms, mobile apps and real-time dashboards in active use</p>
+            </div>
+          </li>
+          <li class="stat-card" data-reveal style="--d:.2s">
+            <span class="stat-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></svg></span>
+            <div>
+              <p class="stat-card__num" data-count="10" data-suffix="M+">10M+</p>
+              <h3>Records Managed</h3>
+              <p>Structured health and demographic data maintained across active studies</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ PARTNERS ============ -->
+    <section class="partners" aria-labelledby="partners-title">
+      <h2 class="partners__title" id="partners-title">Collaboration &amp; Technical Support</h2>
+      <div class="marquee" data-marquee>
+        <ul class="marquee__track">
+          <li><img src="assets/img/partners/icddrb.png" alt="icddr,b" loading="lazy"></li>
+          <li><img src="assets/img/partners/gob.png" alt="Government of the People's Republic of Bangladesh" loading="lazy"></li>
+          <li><img src="assets/img/partners/shield.png" alt="Bangladesh Medical University" loading="lazy"></li>
+          <li><img src="assets/img/partners/emory.png" alt="Emory University" loading="lazy"></li>
+          <li><img src="assets/img/partners/unc.png" alt="The University of North Carolina at Chapel Hill" loading="lazy"></li>
+          <li><img src="assets/img/partners/jhu.png" alt="Johns Hopkins Bloomberg School of Public Health" loading="lazy"></li>
+          <li><img src="assets/img/partners/stc.png" alt="Save the Children" loading="lazy"></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__bar">
+      <a class="nav__brand" href="index.html#home" aria-label="MCHD IT home">
+        <img src="assets/img/logo-mark.png" width="36" height="36" alt="">
+        <span>MCHD IT</span>
+      </a>
+      <a class="btn btn--primary" href="login.html">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg>
+        Client Portal</a>
+    </div>
+    <div class="container footer__legal">
+      <p>&copy; 2026 All Rights Reserved — Developed by MCHD IT, icddr,b</p>
+    </div>
+  </footer>
+
+  <button type="button" class="to-top" data-to-top aria-label="Back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg>
+  </button>
+
+  <script src="assets/js/common.js" defer></script>
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/illos.js" defer></script>
+  <script src="assets/js/firebase-config.js" defer></script>
+  <script src="assets/js/store.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

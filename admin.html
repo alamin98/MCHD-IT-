@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin — MCHD IT</title>
+  <meta name="theme-color" content="#0b2342">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body class="adm">
+  <header class="adm-bar">
+    <a class="adm-brand" href="index.html"><img src="assets/img/logo-mark.png" width="32" height="32" alt=""><span>MCHD IT</span><em>Admin</em></a>
+    <span class="adm-mode" data-mode></span>
+    <nav class="adm-bar__links">
+      <a href="index.html#expertise" target="_blank" rel="noopener">View site
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+      <button type="button" data-signout hidden>Sign out</button>
+    </nav>
+  </header>
+
+  <!-- Sign-in (Firebase mode) -->
+  <main class="adm-login" data-view="login" hidden>
+    <form class="adm-card adm-login__card form" data-login novalidate>
+      <span class="login__lock" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+      <h1>Content admin</h1>
+      <p class="adm-muted">Sign in with your MCHD IT admin account.</p>
+      <label class="field"><span>Email</span><input name="email" type="email" autocomplete="username" required></label>
+      <label class="field"><span>Password</span><input name="password" type="password" autocomplete="current-password" required></label>
+      <p class="form__status" role="status" aria-live="polite" data-form-status></p>
+      <button class="btn btn--dark btn--lg btn--block" type="submit">Sign in</button>
+      <button class="adm-link" type="button" data-forgot>Forgot password?</button>
+    </form>
+  </main>
+
+  <!-- Editor -->
+  <main class="adm-app" data-view="app" hidden>
+    <aside class="adm-side">
+      <div class="adm-side__head">
+        <h2>Core Expertise</h2>
+        <button type="button" class="btn btn--primary adm-btn-sm" data-new>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>New</button>
+      </div>
+      <p class="adm-muted adm-side__hint">Drag to reorder — the order is used on the home page and expertise pages.</p>
+      <ol class="adm-list" data-list></ol>
+      <div class="adm-side__foot" data-seed hidden>
+        <p class="adm-muted">No content in the database yet.</p>
+        <button type="button" class="btn btn--outline" data-import>Import current site content</button>
+      </div>
+      <button type="button" class="adm-link adm-reset" data-reset hidden>Reset demo content</button>
+    </aside>
+
+    <section class="adm-editor">
+      <form class="adm-form" data-form novalidate>
+        <div class="adm-form__head">
+          <div>
+            <p class="adm-eyebrow" data-form-eyebrow>Edit expertise</p>
+            <h1 data-form-title>—</h1>
+          </div>
+          <div class="adm-form__actions">
+            <a class="btn btn--outline adm-btn-sm" data-preview target="_blank" rel="noopener">Preview</a>
+            <button type="submit" class="btn btn--primary adm-btn-sm" data-save>Save changes</button>
+          </div>
+        </div>
+
+        <div class="adm-grid">
+          <div class="adm-card">
+            <h3 class="adm-card__t">Basics</h3>
+            <label class="field"><span>Title *</span><input name="title" required maxlength="120"></label>
+            <div class="form__row">
+              <label class="field"><span>URL slug *</span><input name="slug" required pattern="[a-z0-9]+(-[a-z0-9]+)*" maxlength="80"><small class="adm-help">expertise.html?slug=<b data-slug-preview></b></small></label>
+              <label class="field"><span>Icon</span><div class="adm-icon-pick"><span class="adm-icon-pv" data-icon-pv></span><select name="key" data-icons></select></div></label>
+            </div>
+            <label class="field"><span>Card description * <small class="adm-count" data-count-for="text"></small></span><textarea name="text" rows="3" required maxlength="260"></textarea></label>
+            <label class="adm-switch"><input type="checkbox" name="published"><span></span>Published (visible on the website)</label>
+          </div>
+
+          <div class="adm-card">
+            <h3 class="adm-card__t">Images <small class="adm-muted">first image = cover</small></h3>
+            <ul class="adm-images" data-images></ul>
+            <div class="adm-drop" data-drop tabindex="0" role="button" aria-label="Upload images">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg>
+              <p><b>Drop images here</b> or click to upload</p><small>JPG / PNG — resized to 1600px automatically</small>
+              <input type="file" accept="image/*" multiple hidden data-file>
+            </div>
+            <div class="adm-url"><input type="url" placeholder="…or paste an image URL / assets path" data-url><button type="button" class="btn btn--outline adm-btn-sm" data-url-add>Add</button></div>
+          </div>
+
+          <div class="adm-card adm-card--wide">
+            <h3 class="adm-card__t">Overview <small class="adm-muted">one paragraph per block — leave an empty line between paragraphs. The first paragraph is shown large.</small></h3>
+            <textarea name="overview" rows="9" class="adm-ta"></textarea>
+          </div>
+
+          <div class="adm-card">
+            <h3 class="adm-card__t">What we do <small class="adm-muted">one item per line</small></h3>
+            <textarea name="whatWeDo" rows="8" class="adm-ta"></textarea>
+          </div>
+
+          <div class="adm-card adm-card--wide">
+            <h3 class="adm-card__t">Selected projects <small class="adm-muted">one per line as <code>Project name: what we built</code></small></h3>
+            <textarea name="projects" rows="5" class="adm-ta" placeholder="eMIS: four Android apps that replaced the paper registers…"></textarea>
+          </div>
+
+          <div class="adm-card">
+            <h3 class="adm-card__t">Tools <small class="adm-muted">comma separated — known tools show their logo</small></h3>
+            <input name="tools" class="adm-input" placeholder="e.g. Android tablets, CAPI, ODK, SQL Server">
+            <h3 class="adm-card__t adm-mt">Extra facts <small class="adm-muted">shown in the page header, one per line as <code>Label: Value</code></small></h3>
+            <textarea name="meta" rows="4" class="adm-ta" placeholder="Partners: …&#10;Coverage: …"></textarea>
+          </div>
+        </div>
+
+        <div class="adm-danger">
+          <button type="button" class="adm-link adm-link--danger" data-delete>Delete this expertise</button>
+          <span class="adm-muted" data-updated></span>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <div class="adm-toast" role="status" aria-live="polite" data-toast></div>
+
+  <script src="assets/js/common.js" defer></script>
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/firebase-config.js" defer></script>
+  <script src="assets/js/store.js" defer></script>
+  <script src="assets/js/admin.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Core Expertise (design sample) — MCHD IT</title>
+  <meta name="theme-color" content="#0b2342">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/expertise-sample.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="page page--expertise page--xs">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav" data-nav>
+    <div class="nav__bar">
+      <a class="nav__brand" href="index.html#home" aria-label="MCHD IT home">
+        <img src="assets/img/logo-mark.png" width="36" height="36" alt="">
+        <span>MCHD IT</span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="index.html#home" data-nav-link>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg>Home</a>
+        <a href="index.html#technology" data-nav-link>
+          <svg class="i-tech" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6 7.5 7.8v3.6c0 3.1 1.9 5 4.5 5.8 2.6-.8 4.5-2.7 4.5-5.8V7.8z"/><path d="M9.9 10.7a3 3 0 0 1 4.2 0M10.9 12.1a1.5 1.5 0 0 1 2.2 0"/><circle cx="12" cy="13.8" r=".5" fill="currentColor" stroke="none"/><path d="M12 6V3.9M12 17.2v2.9M7.5 11H4.4M16.5 11h3.1M9.4 7V5.2H7.6M14.6 7V5.2h1.8M8.7 15.4v2.3H7.6M15.3 15.4v2.3h1.1"/><circle cx="12" cy="2.85" r="1.05"/><circle cx="12" cy="21.15" r="1.05"/><circle cx="3.35" cy="11" r="1.05"/><circle cx="20.65" cy="11" r="1.05"/><circle cx="6.55" cy="5.2" r="1.05"/><circle cx="17.45" cy="5.2" r="1.05"/><circle cx="6.55" cy="17.7" r="1.05"/><circle cx="17.45" cy="17.7" r="1.05"/></svg>Technology</a>
+        <a href="index.html#expertise" data-nav-link aria-current="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M2 12h3M19 12h3M4.9 19.1 7 17M17 7l2.1-2.1"/></svg>Expertise</a>
+        <a href="index.html#team" data-nav-link>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6 6 0 0 1 3.5 6"/></svg>Our Team</a>
+        <a href="index.html#global" data-nav-link>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>Global</a>
+      </nav>
+      <a class="btn btn--primary nav__cta" href="contact.html">Contact</a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" data-nav-toggle>
+        <span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__sheet" id="mobile-menu" data-nav-sheet hidden>
+      <a href="index.html#home">Home</a>
+      <a href="index.html#technology">Technology</a>
+      <a href="index.html#expertise">Expertise</a>
+      <a href="index.html#team">Our Team</a>
+      <a href="index.html#global">Global</a>
+      <a class="btn btn--primary" href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <!-- DESIGN SAMPLE — Expertise detail page, proposal B. Not linked from the live site until approved. -->
+  <main id="main" data-page="expertise-sample" class="xs">
+
+    <!-- 1. Hero: copy left, real product screen right (no extra browser frame) -->
+    <section class="xs-hero" aria-labelledby="xs-title">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__beam hero__beam--a"></div><div class="hero__beam hero__beam--b"></div><div class="hero__beam hero__beam--c"></div>
+        <div class="hero__grid"></div><canvas class="hero__particles" data-particles></canvas><div class="hero__horizon"></div>
+      </div>
+      <div class="container xs-hero__grid">
+        <div class="xs-hero__copy">
+          <nav class="crumbs" aria-label="Breadcrumb" data-reveal>
+            <a href="index.html#home">Home</a><span aria-hidden="true">/</span><a href="index.html#expertise">Core Expertise</a><span aria-hidden="true">/</span><span aria-current="page" data-x-crumb></span>
+          </nav>
+          <p class="badge badge--dark xs-badge" data-reveal style="--d:.05s"><span class="xs-badge__icon" data-x-icon></span><span>Core Expertise</span><b data-x-index></b></p>
+          <h1 class="xs-hero__title" id="xs-title" data-x-title data-reveal style="--d:.1s"></h1>
+          <p class="xs-hero__lead" data-x-text data-reveal style="--d:.18s"></p>
+          <div class="xs-hero__actions" data-reveal style="--d:.26s">
+            <a class="btn btn--primary btn--lg" data-x-cta-link href="contact.html">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Talk to the team</a>
+            <a class="btn btn--ghost btn--lg" href="#overview" data-x-jump>Read the overview</a>
+          </div>
+        </div>
+        <div class="xs-show" data-x-show data-reveal style="--d:.2s"></div>
+      </div>
+    </section>
+
+    <!-- 2. Key facts: one white card that bridges the hero and the content -->
+    <div class="container xs-facts-wrap"><dl class="xs-facts" data-x-facts data-reveal></dl></div>
+
+    <!-- 3. Content: sticky side rail (chapters, tools, contact) + reading column -->
+    <div class="container xs-layout" data-x-layout>
+      <aside class="xs-aside" aria-label="Page tools">
+        <nav class="xs-toc" aria-label="On this page" data-x-toc>
+          <p class="xs-aside__t">On this page</p>
+          <div class="xs-toc__rail" aria-hidden="true"><span data-x-rail></span></div>
+          <ol class="xs-toc__list" data-x-toc-list></ol>
+        </nav>
+        <section class="xs-card xs-stack" aria-labelledby="xs-stack-t" data-x-stack hidden>
+          <p class="xs-aside__t" id="xs-stack-t">Tools &amp; platforms</p>
+          <ul class="xs-chips" data-x-tools></ul>
+        </section>
+        <section class="xs-card xs-ask" aria-labelledby="xs-ask-t">
+          <span class="xs-ask__icon" data-x-ask-icon aria-hidden="true"></span>
+          <p class="xs-ask__t" id="xs-ask-t">Need something like this?</p>
+          <p>Talk to the MCHD IT team about a demonstration, or about building something like it for your study.</p>
+          <a class="btn btn--primary xs-ask__btn" data-x-cta-link href="contact.html">Contact us
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </section>
+      </aside>
+      <div class="xs-main" data-x-body></div>
+    </div>
+
+    <!-- 4. Continue exploring -->
+    <section class="xs-more" aria-labelledby="xs-more-t">
+      <div class="container">
+        <header class="xs-more__head">
+          <div><p class="badge">What We Do</p><h2 id="xs-more-t">Continue exploring</h2></div>
+          <a class="btn btn--outline-dark" href="index.html#expertise"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>All expertise</a>
+        </header>
+        <div class="xs-pager" data-x-pager></div>
+        <ul class="xs-grid" data-x-more></ul>
+      </div>
+    </section>
+
+    <dialog class="xd-lb" data-x-lightbox aria-label="Product screen viewer">
+      <div class="xd-lb__frame"><img alt="" data-lb-img><p class="xd-lb__cap" data-lb-cap></p></div>
+      <button type="button" class="icon-btn xd-lb__close" data-lb-close aria-label="Close viewer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      <button type="button" class="icon-btn xd-lb__nav xd-lb__nav--prev" data-lb-prev aria-label="Previous screen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg></button>
+      <button type="button" class="icon-btn xd-lb__nav xd-lb__nav--next" data-lb-next aria-label="Next screen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button>
+    </dialog>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__bar">
+      <a class="nav__brand" href="index.html#home" aria-label="MCHD IT home">
+        <img src="assets/img/logo-mark.png" width="36" height="36" alt="">
+        <span>MCHD IT</span>
+      </a>
+      <a class="btn btn--primary" href="login.html">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg>
+        Client Portal</a>
+    </div>
+    <div class="container footer__legal">
+      <p>&copy; 2026 All Rights Reserved — Developed by MCHD IT, icddr,b</p>
+    </div>
+  </footer>
+
+  <button type="button" class="to-top" data-to-top aria-label="Back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg>
+  </button>
+  <script src="assets/js/common.js" defer></script>
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/illos.js" defer></script>
+  <script src="assets/js/firebase-config.js" defer></script>
+  <script src="assets/js/store.js" defer></script>
+  <script src="assets/js/expertise-sample.js" defer></script>
+</body>
+</html>
